@@ -1,0 +1,22 @@
+Basically this app works like this:
+
+In the main method we set up the tomcat web server. We specify the users (should be safer though) and roles.
+
+SERVLET
+Now for each app-related url, that a client enters in the browser address bar, we have a servlet.
+Servlet catches the request from that URL (specified with the @WebServlet annotation).
+You can get parameters, do some logic, write/read to/from database and forward the req-res pair to jsp.
+
+JSP
+This is like a modified html, where you can parse in some Java elements within jsp tags. This is for people (designers,
+front-end devs), who do not need to know any server-side Java, therefore it is best practice to keep the logic away from jsp-s.
+
+JSTL - JSP Standard Tag Library
+This is used to keep a JSP file cleaner. In the old days, if the code got too complicated, developers put Java code directly
+inside <% %> tags or scriplets <jsp:scriptlet> code fragment </jsp:scriptlet>
+These days we use JSTL (Core, format, sql etc) custom tags to integrate more complex logic nicely.
+
+FILTER chains
+Basically you can around the req-res pair as much as you want. The last filter in the chain invokes the resource at the end of the chain.
+With each filter you can implement some logic.
+

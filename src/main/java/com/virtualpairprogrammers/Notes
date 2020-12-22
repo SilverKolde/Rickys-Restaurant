@@ -1,0 +1,5 @@
+Model   - MenuDao and others. All the logic and stuff
+View    - jsp files that are seen in the browser
+Control - servlets. That's the glue, that's holding everything together.
+          It commonly extracts any incoming parameters, calls the model and depending on the outcome (success or failure)
+          will forward to the appropriate View. They are in control of the application flow - which page is shown to the user and when.
